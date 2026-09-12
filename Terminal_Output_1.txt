@@ -1,0 +1,383 @@
+**********************
+PowerShell transcript start
+Start time: 20260910214427
+Username: DESKTOP-94J2OEC\DELL
+RunAs User: DESKTOP-94J2OEC\DELL
+Configuration Name: 
+Machine: DESKTOP-94J2OEC (Microsoft Windows NT 10.0.28120.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.6.0_x64__8wekyb3d8bbwe\pwsh.dll -noexit -command try { . "c:\Users\DELL\AppData\Local\Programs\Microsoft VS Code\645f29cc31\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 31044
+PSVersion: 7.6.6
+PSEdition: Core
+GitCommitId: 7.6.6
+OS: Microsoft Windows 10.0.28120
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is .\Terminal_Output.txt
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>mkdir Amazon_EC2_Static_Website
+
+    Directory: C:\Users\DELL\Downloads\DeVops Project\Cloud Computing
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          10-09-2026    21:44                Amazon_EC2_Static_Website
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>cd Amazon_EC2_Static_Website
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>pwd
+
+Path
+----
+C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>git init
+Initialized empty Git repository in C:/Users/DELL/Downloads/DeVops Project/Cloud Computing/Amazon_EC2_Static_Website/.git/
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>mkdir screenshots
+
+    Directory: C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          10-09-2026    21:49                screenshots
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>wsl -d Ubuntu
+ng/Amazon_EC2_Static_Website$ exit
+logout
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>git status
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>cd ..
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>gh --version
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>gh auth status
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>gh repo create Cloud-Computing --public --source=. --remote=origin
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>Remove-Item -Recurse -Force .\Amazon_EC2_Static_Website\.git
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>git init
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>git status
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>gh repo create Cloud-Computing --public --source=. --remote=origin
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>git add .
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>git commit -m "Initialize Cloud Computing repository"
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>git branch -M main
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>git push -u origin main
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>Get-ChildItem
+
+    Directory: C:\Users\DELL\Downloads\DeVops Project\Cloud Computing
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          10-09-2026    23:10                Amazon_EC2_Static_Website
+-a---          10-09-2026    15:54          62932 Student Activity Amazon
+                                                  EC2.pdf
+-a---          10-09-2026    23:14           5973 Terminal_Output.txt
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>wsl -d Ubuntu
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>git add .
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>git status
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>git remote add origin https://github.com/SUMITXP10/Cloud-Computing.git
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>git branch -M main
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>git push -u origin main
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws --version
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws sts get-caller-identity
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws configure set region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws configure get region
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws login --profile new-aws
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws sts get-caller-identity --profile new-aws
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws configure set region ap-south-1 --profile new-aws
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws configure list-profiles
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 describe-instances --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws configure list --profile new-aws
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws login
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws login --profile new-aws
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws login --profile new-aws
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws configure list --profile new-aws
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws configure list --profile new-aws
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws configure set region ap-south-1 --profile new-aws
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$VPC_ID = aws ec2 describe-vpcs --filters "Name=is-default,Values=true" --query "Vpcs[0].VpcId" --output text --profile new-aws
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$SUBNET_ID = aws ec2 describe-subnets --filters "Name=vpc-id,Values=$VPC_ID" --query "Subnets[0].SubnetId" --output text --profile new-aws
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$MY_IP = (Invoke-RestMethod https://checkip.amazonaws.com).Trim()
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 create-key-pair --key-name Amazon-EC2-Static-Website-Key --query "KeyMaterial" --output text --profile new-aws | Out-File -Encoding ascii Amazon-EC2-Static-Website-Key.pem
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$SG_ID = aws ec2 create-security-group --group-name Amazon-EC2-Static-Website-SG --description "Security group for EC2 static website" --vpc-id $VPC_ID --query "GroupId" --output text --profile new-aws
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port 22 --cidr "$MY_IP/32" --profile new-aws
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port 80 --cidr 0.0.0.0/0 --profile new-aws
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$AMI_ID = aws ssm get-parameter --name "/aws/service/canonical/ubuntu/server/22.04/stable/current/amd64/hvm/ebs-gp3/ami-id" --query "Parameter.Value" --output text --profile new-aws --region ap-south-1
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$AMI_ID = aws ec2 describe-images --owners 099720109477 --filters "Name=name,Values=ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*" "Name=state,Values=available" "Name=architecture,Values=x86_64" "Name=root-device-type,Values=ebs" --query "sort_by(Images,&CreationDate)[-1].ImageId" --output text --profile new-aws --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$AMI_ID
+ami-07dfe2c11d33a069a
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 describe-images --image-ids $AMI_ID --query "Images[0].[Name,ImageId,Architecture,State]" --output table --profile new-aws --region ap-south-1
+--------------------------------------------------------------------
+|                          DescribeImages                          |
++------------------------------------------------------------------+
+|  ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20260904  |
+|  ami-07dfe2c11d33a069a                                           |
+|  x86_64                                                          |
+|  available                                                       |
++------------------------------------------------------------------+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$INSTANCE_ID = aws ec2 run-instances --image-id $AMI_ID --instance-type t2.micro --key-name Amazon-EC2-Static-Website-Key --security-group-ids $SG_ID --subnet-id $SUBNET_ID --associate-public-ip-address --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=Amazon-EC2-Static-Website}]' --query "Instances[0].InstanceId" --output text --profile new-aws --region ap-south-1
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$INSTANCE_ID = aws ec2 run-instances --image-id $AMI_ID --instance-type t3.micro --key-name Amazon-EC2-Static-Website-Key --security-group-ids $SG_ID --subnet-id $SUBNET_ID --associate-public-ip-address --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=Amazon-EC2-Static-Website}]' --query "Instances[0].InstanceId" --output text --profile new-aws --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$INSTANCE_ID
+i-09279c069212d8562
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 wait instance-running --instance-ids $INSTANCE_ID --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$PUBLIC_IP = aws ec2 describe-instances --instance-ids $INSTANCE_ID --query "Reservations[0].Instances[0].PublicIpAddress" --output text --profile new-aws --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$PUBLIC_IP
+3.110.176.24
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>ssh -i .\Amazon-EC2-Static-Website-Key.pem ubuntu@$PUBLIC_IP
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 describe-instance-status --instance-ids $INSTANCE_ID --include-all-instances --query "InstanceStatuses[0].[InstanceState.Name,SystemStatus.Status,InstanceStatus.Status]" --output table --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 describe-instances --instance-ids $INSTANCE_ID --query "Reservations[0].Instances[0].[PublicIpAddress,PrivateIpAddress,SubnetId,VpcId,SecurityGroups[0].GroupId,State.Name]" --output table --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$ROUTE_TABLE_ID = aws ec2 describe-route-tables --filters "Name=association.subnet-id,Values=$SUBNET_ID" --query "RouteTables[0].RouteTableId" --output text --profile new-aws --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$ROUTE_TABLE_ID
+None
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 describe-route-tables --route-table-ids $ROUTE_TABLE_ID --query "RouteTables[0].Routes" --output table --profile new-aws --region ap-south-1
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$ROUTE_TABLE_ID = aws ec2 describe-route-tables --filters "Name=vpc-id,Values=$VPC_ID" --query "RouteTables[?Associations[?Main==`true`]].RouteTableId | [0]" --output text --profile new-aws --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$ROUTE_TABLE_ID
+None
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 describe-route-tables --filters "Name=vpc-id,Values=$VPC_ID" --query "RouteTables[].{RouteTableId:RouteTableId,Main:Associations[?Main==`true`].Main,Routes:Routes}" --output json --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 describe-internet-gateways --filters "Name=attachment.vpc-id,Values=$VPC_ID" --query "InternetGateways[].InternetGatewayId" --output text --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 describe-route-tables --filters "Name=association.subnet-id,Values=$SUBNET_ID" --query "RouteTables[].RouteTableId" --output text --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 describe-subnets --subnet-ids $SUBNET_ID --query "Subnets[0].[MapPublicIpOnLaunch,VpcId,AvailabilityZone]" --output table --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>ssh -i .\Amazon-EC2-Static-Website-Key.pem ubuntu@$PUBLIC_IP
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$MY_IP = (Invoke-RestMethod https://checkip.amazonaws.com).Trim()
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$MY_IP
+49.42.191.31
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port 22 --cidr "$MY_IP/32" --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>ssh -o ConnectTimeout=15 -i .\Amazon-EC2-Static-Website-Key.pem ubuntu@$PUBLIC_IP
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>Test-NetConnection $PUBLIC_IP -Port 22
+WARNING: TCP connect to (3.110.176.24 : 22) failed
+WARNING: Ping to 3.110.176.24 failed with status: TimedOut
+
+ComputerName           : 3.110.176.24
+RemoteAddress          : 3.110.176.24
+RemotePort             : 22
+InterfaceAlias         : Wi-Fi
+SourceAddress          : 10.12.118.4
+PingSucceeded          : False
+PingReplyDetails (RTT) : 0 ms
+TcpTestSucceeded       : False
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 describe-security-groups --group-ids $SG_ID --query "SecurityGroups[0].IpPermissions" --output json --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$NACL_ID = aws ec2 describe-network-acls --filters "Name=association.subnet-id,Values=$SUBNET_ID" --query "NetworkAcls[0].NetworkAclId" --output text --profile new-aws --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$NACL_ID
+acl-0783c044a1005c708
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 describe-network-acls --network-acl-ids $NACL_ID --query "NetworkAcls[0].Entries" --output table --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>Test-NetConnection $PUBLIC_IP -Port 80
+WARNING: TCP connect to (3.110.176.24 : 80) failed
+WARNING: Ping to 3.110.176.24 failed with status: TimedOut
+
+ComputerName           : 3.110.176.24
+RemoteAddress          : 3.110.176.24
+RemotePort             : 80
+InterfaceAlias         : Wi-Fi
+SourceAddress          : 10.12.118.4
+PingSucceeded          : False
+PingReplyDetails (RTT) : 0 ms
+TcpTestSucceeded       : False
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 describe-security-groups --group-ids $SG_ID --query "SecurityGroups[0].IpPermissionsEgress" --output table --profile new-aws --region ap-south-1
++----------------------+
+|  -1                  |
++----------------------+
+||      IpRanges      ||
+|+--------------------+|
+||       CidrIp       ||
+|+--------------------+|
+||  0.0.0.0/0         ||
+|+--------------------+|
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$MY_IP = (Invoke-RestMethod https://checkip.amazonaws.com).Trim()
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>$MY_IP
+157.41.228.200
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port 22 --cidr "$MY_IP/32" --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>ssh -o ConnectTimeout=15 -i .\Amazon-EC2-Static-Website-Key.pem ubuntu@$PUBLIC_IP
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>Test-NetConnection $PUBLIC_IP -Port 80
+WARNING: TCP connect to (3.110.176.24 : 80) failed
+WARNING: Ping to 3.110.176.24 failed with status: TimedOut
+
+ComputerName           : 3.110.176.24
+RemoteAddress          : 3.110.176.24
+RemotePort             : 80
+InterfaceAlias         : Wi-Fi
+SourceAddress          : 192.168.50.4
+PingSucceeded          : False
+PingReplyDetails (RTT) : 0 ms
+TcpTestSucceeded       : False
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>Test-NetConnection google.com -Port 443
+
+ComputerName     : google.com
+RemoteAddress    : 2404:6800:4002:830::200e
+RemotePort       : 443
+InterfaceAlias   : Wi-Fi
+SourceAddress    : 2409:4089:2d4c:8168:9cd5:4810:3dc5:f176
+TcpTestSucceeded : True
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>Test-NetConnection google.com -Port 80
+
+ComputerName     : google.com
+RemoteAddress    : 2404:6800:4002:830::200e
+RemotePort       : 80
+InterfaceAlias   : Wi-Fi
+SourceAddress    : 2409:4089:2d4c:8168:9cd5:4810:3dc5:f176
+TcpTestSucceeded : True
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>Test-NetConnection $PUBLIC_IP -Port 80
+WARNING: TCP connect to (3.110.176.24 : 80) failed
+WARNING: Ping to 3.110.176.24 failed with status: TimedOut
+
+ComputerName           : 3.110.176.24
+RemoteAddress          : 3.110.176.24
+RemotePort             : 80
+InterfaceAlias         : Wi-Fi
+SourceAddress          : 192.168.50.4
+PingSucceeded          : False
+PingReplyDetails (RTT) : 0 ms
+TcpTestSucceeded       : False
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>tracert -d $PUBLIC_IP
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud ComputingPS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing> ]633;B
+PS>Stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20260912105516
+**********************

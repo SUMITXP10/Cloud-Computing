@@ -1,0 +1,77 @@
+# =====================================================
+# Cloud Computing / DevOps Repository
+# =====================================================
+
+# -----------------------------
+# AWS / EC2 Private Keys
+# -----------------------------
+*.pem
+*.key
+*.ppk
+
+# AWS credentials / secrets
+.aws/
+.env
+.env.*
+
+# -----------------------------
+# Terraform
+# -----------------------------
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Keep provider lock file
+# .terraform.lock.hcl
+
+# -----------------------------
+# Logs
+# -----------------------------
+*.log
+
+# -----------------------------
+# VS Code
+# -----------------------------
+.vscode/
+
+# -----------------------------
+# Vim Swap Files
+# -----------------------------
+*.swp
+*.swo
+*~
+
+# -----------------------------
+# Python Cache
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+
+# -----------------------------
+# Node.js
+# -----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -----------------------------
+# Temporary / Backup Files
+# -----------------------------
+*.tmp
+*.temp
+*.bak
+
+# -----------------------------
+# OS Files
+# -----------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
