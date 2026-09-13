@@ -27,8 +27,11 @@ override.tf.json
 *_override.tf
 *_override.tf.json
 
-# Keep provider lock file
+# Keep provider lock file tracked
 # .terraform.lock.hcl
+
+# Terraform plan files
+*.tfplan
 
 # -----------------------------
 # Logs
@@ -53,6 +56,8 @@ override.tf.json
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
+.pytest_cache/
 
 # -----------------------------
 # Node.js
@@ -74,4 +79,5 @@ yarn-error.log*
 # -----------------------------
 .DS_Store
 Thumbs.db
+desktop.ini
 Desktop.ini
