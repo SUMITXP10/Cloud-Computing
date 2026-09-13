@@ -1,6 +1,6 @@
 **********************
 PowerShell transcript start
-Start time: 20260913111128
+Start time: 20260913114216
 Username: DESKTOP-94J2OEC\DELL
 RunAs User: DESKTOP-94J2OEC\DELL
 Configuration Name: 
@@ -19,44 +19,181 @@ WSManStackVersion: 3.0
 **********************
 Transcript started, output file is .\Terminal_Output_3.txt
 ]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
-PS>Get-ChildItem .\index2.html, .\My_Day.png
+PS>$HTML_URL = "https://raw.githubusercontent.com/SUMITXP10/Cloud-Computing/main/Amazon_EC2_Static_Website/index2.html"
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$IMAGE_URL = "https://raw.githubusercontent.com/SUMITXP10/Cloud-Computing/main/Amazon_EC2_Static_Website/My_Day.png"
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$DEPLOY_COMMANDS = @(
+    "sudo curl -L '$HTML_URL' -o /var/www/html/index.html",
+    "sudo curl -L '$IMAGE_URL' -o /var/www/html/My_Day.png",
+    "sudo chown -R www-data:www-data /var/www/html",
+    "sudo chmod 755 /var/www/html/index.html",
+    "sudo chmod 644 /var/www/html/My_Day.png",
+    "sudo systemctl restart apache2",
+    "sudo systemctl is-active apache2"
+)
 
-    Directory: C:\Users\DELL\Downloads\DeVops Project\Cloud
-Computing\Amazon_EC2_Static_Website
+$PARAMETERS = @{ commands = $DEPLOY_COMMANDS } | ConvertTo-Json -Compress
 
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a---          13-09-2026    10:28          12812 index2.html
--a---          02-09-2026    10:11        2697802 My_Day.png
+$ROOT_COMMAND_ID = aws ssm send-command `
+    --instance-ids $INSTANCE_ID `
+    --document-name "AWS-RunShellScript" `
+    --parameters $PARAMETERS `
+    --query "Command.CommandId" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+
+$ROOT_COMMAND_ID
+8d30016a-71f6-46e1-8970-3ec218e56aff
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Start-Sleep -Seconds 10
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm get-command-invocation `
+    --command-id $ROOT_COMMAND_ID `
+    --instance-id $INSTANCE_ID `
+    --query "[Status,StandardOutputContent,StandardErrorContent]" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+]633;D]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+]633;D]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$INSTANCE_ID = aws ec2 describe-instances --filters "Name=tag:Name,Values=Amazon-EC2-Static-Website" "Name=instance-state-name,Values=running" --query "Reservations[0].Instances[0].InstanceId" --output text --profile new-aws --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$INSTANCE_ID
+i-09279c069212d8562
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm get-command-invocation `
+    --command-id $ROOT_COMMAND_ID `
+    --instance-id $INSTANCE_ID `
+    --query "[Status,StatusDetails,StandardOutputContent,StandardErrorContent]" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$HTML_URL = "https://raw.githubusercontent.com/SUMITXP10/Cloud-Computing/main/Amazon_EC2_Static_Website/index2.html"
+$IMAGE_URL = "https://raw.githubusercontent.com/SUMITXP10/Cloud-Computing/main/Amazon_EC2_Static_Website/My_Day.png"
+
+$DEPLOY_COMMANDS = @(
+    "sudo curl -fL '$HTML_URL' -o /var/www/html/index.html",
+    "sudo curl -fL '$IMAGE_URL' -o /var/www/html/My_Day.png",
+    "sudo chown www-data:www-data /var/www/html/index.html /var/www/html/My_Day.png",
+    "sudo chmod 755 /var/www/html/index.html",
+    "sudo chmod 644 /var/www/html/My_Day.png",
+    "sudo systemctl restart apache2",
+    "sudo systemctl is-active apache2"
+)
+
+$PARAMETERS = @{ commands = $DEPLOY_COMMANDS } | ConvertTo-Json -Compress
+
+$ROOT_COMMAND_ID = aws ssm send-command `
+    --instance-ids i-09279c069212d8562 `
+    --document-name "AWS-RunShellScript" `
+    --parameters $PARAMETERS `
+    --query "Command.CommandId" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+
+$ROOT_COMMAND_ID
+77d29b82-e214-4f9a-b402-164f7040362a
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm wait command-executed `
+    --command-id $ROOT_COMMAND_ID `
+    --instance-id i-09279c069212d8562 `
+    --profile new-aws `
+    --region ap-south-1
 
 ]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
-PS>git add
-Nothing specified, nothing added.
-hint: Maybe you wanted to say 'git add .'?
-hint: Disable this message with "git config set advice.addEmptyPathspec false"
-]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
-PS>git add .
-warning: in the working copy of 'Amazon_EC2_Static_Website/index.html', LF will
-be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'Amazon_EC2_Static_Website/index2.html', LF will
- be replaced by CRLF the next time Git touches it
-]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
-PS>git status
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   ../.gitignore
-        modified:   Terminal_Output_3.txt
-        deleted:    ../Student Activity Amazon EC2.pdf
-        deleted:    ../Terminal_Output_1.txt
-        deleted:    ../Terminal_Output_2.txt
-]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
-PS>git add -A
+PS>aws ssm get-command-invocation `
+    --command-id $ROOT_COMMAND_ID `
+    --instance-id i-09279c069212d8562 `
+    --query "[Status,StatusDetails,StandardOutputContent,StandardErrorContent]" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
 
 ]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
-PS>git status
+PS>aws ssm wait command-executed `
+    --command-id $ROOT_COMMAND_ID `
+    --instance-id i-09279c069212d8562 `
+    --profile new-aws `
+    --region ap-south-1
 
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm get-command-invocation `
+    --command-id $ROOT_COMMAND_ID `
+    --instance-id i-09279c069212d8562 `
+    --query "[Status,StatusDetails,StandardOutputContent,StandardErrorContent]" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$VERIFY_ID = aws ssm send-command `
+    --instance-ids i-09279c069212d8562 `
+    --document-name "AWS-RunShellScript" `
+    --parameters '{"commands":["ls -lh /var/www/html/index.html /var/www/html/My_Day.png","grep -o \"A126023\" /var/www/html/index.html","sudo systemctl is-active apache2"]}' `
+    --query "Command.CommandId" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Start-Sleep -Seconds 5
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm get-command-invocation `
+    --command-id $VERIFY_ID `
+    --instance-id i-09279c069212d8562 `
+    --query "[Status,StandardOutputContent,StandardErrorContent]" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Invoke-WebRequest "http://3.110.176.24/" -UseBasicParsing
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width,
+                    initial-scale=1.0">
+
+                        <title>A126023 AWS Project</title>
+
+                        <style>
+                         …
+RawContent        : HTTP/1.1 200 OK
+                    Date: Sun, 13 Sep 2026 08:08:55 GMT
+                    Server: Apache/2.4.52
+                    Server: (Ubuntu)
+                    ETag: "320c-65b5742967693-gzip"
+                    Accept-Ranges: bytes
+                    Vary: Accept-Encoding
+                    Last-Modified: Sun, 13 Sep …
+Headers           : {[Date, System.String[]], [Server, System.String[]],
+                    [ETag, System.String[]], [Accept-Ranges, System.String[]]…}
+Images            : {}
+InputFields       : {}
+Links             : {@{outerHTML=<a href="#home">Home</a>; tagName=A;
+                    href=#home}, @{outerHTML=<a href="#about">About</a>;
+                    tagName=A; href=#about}, @{outerHTML=<a
+                    href="#skills">Skills</a>; tagName=A; href=#skills},
+                    @{outerHTML=<a href="#project">Project</a>; tagName=A;
+                    href=#project}…}
+RawContentLength  : 12812
+RelationLink      : {}
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Start-Process "http://3.110.176.24/"
 ]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
 PS>Stop-Transcript
 **********************
 PowerShell transcript end
-End time: 20260913112313
+End time: 20260913134553
 **********************
