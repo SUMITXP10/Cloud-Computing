@@ -1,4 +1,3 @@
-cat > README.md <<'EOF'
 # Amazon EC2 Static Website
 
 ## Overview
