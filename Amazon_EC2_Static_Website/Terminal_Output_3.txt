@@ -1,0 +1,62 @@
+**********************
+PowerShell transcript start
+Start time: 20260913111128
+Username: DESKTOP-94J2OEC\DELL
+RunAs User: DESKTOP-94J2OEC\DELL
+Configuration Name: 
+Machine: DESKTOP-94J2OEC (Microsoft Windows NT 10.0.28120.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.6.0_x64__8wekyb3d8bbwe\pwsh.dll -noexit -command try { . "c:\Users\DELL\AppData\Local\Programs\Microsoft VS Code\645f29cc31\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 26484
+PSVersion: 7.6.6
+PSEdition: Core
+GitCommitId: 7.6.6
+OS: Microsoft Windows 10.0.28120
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is .\Terminal_Output_3.txt
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Get-ChildItem .\index2.html, .\My_Day.png
+
+    Directory: C:\Users\DELL\Downloads\DeVops Project\Cloud
+Computing\Amazon_EC2_Static_Website
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          13-09-2026    10:28          12812 index2.html
+-a---          02-09-2026    10:11        2697802 My_Day.png
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config set advice.addEmptyPathspec false"
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>git add .
+warning: in the working copy of 'Amazon_EC2_Static_Website/index.html', LF will
+be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Amazon_EC2_Static_Website/index2.html', LF will
+ be replaced by CRLF the next time Git touches it
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>git status
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../.gitignore
+        modified:   Terminal_Output_3.txt
+        deleted:    ../Student Activity Amazon EC2.pdf
+        deleted:    ../Terminal_Output_1.txt
+        deleted:    ../Terminal_Output_2.txt
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>git add -A
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>git status
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20260913112313
+**********************

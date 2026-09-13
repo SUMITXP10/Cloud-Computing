@@ -1,0 +1,302 @@
+**********************
+PowerShell transcript start
+Start time: 20260913090238
+Username: DESKTOP-94J2OEC\DELL
+RunAs User: DESKTOP-94J2OEC\DELL
+Configuration Name: 
+Machine: DESKTOP-94J2OEC (Microsoft Windows NT 10.0.28120.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.6.0_x64__8wekyb3d8bbwe\pwsh.dll -noexit -command try { . "c:\Users\DELL\AppData\Local\Programs\Microsoft VS Code\645f29cc31\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 24488
+PSVersion: 7.6.6
+PSEdition: Core
+GitCommitId: 7.6.6
+OS: Microsoft Windows 10.0.28120
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is .\Terminal_Output_2.txt
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>wsl -d Ubuntu
+    <p>Website hosted on Amazon EC2.</p>
+</body>
+</html>
+dell@DESKTOP-94J2OEC:/mnt/c/Users/DELL/Downloads/DeVops Project/Cloud Computing/Amazon
+_EC2_Static_Website$ ls -l
+total 40052
+-rwxrwxrwx 1 dell dell     1706 Sep 12 03:20  Amazon-EC2-Static-Website-Key.pem
+-rwxrwxrwx 1 dell dell   116117 Sep 13 02:34  Amazon_EC2_Static_Website.png
+-rwxrwxrwx 1 dell dell    10210 Sep 12 15:05  Commands.txt
+-rwxrwxrwx 1 dell dell     1052 Sep 12 15:27  README.md
+-rwxrwxrwx 1 dell dell 40771413 Sep 13 02:35  Screenshot.pdf
+-rwxrwxrwx 1 dell dell    62932 Sep 10 10:24  'Student Activity Amazon EC2.pdf'
+-rwxrwxrwx 1 dell dell    29029 Sep 12 20:24  Terminal_Output_1.txt
+-rwxrwxrwx 1 dell dell     1108 Sep 13 03:32  Terminal_Output_2.txt
+-rwxrwxrwx 1 dell dell      160 Sep 13 03:34  index.html
+dell@DESKTOP-94J2OEC:/mnt/c/Users/DELL/Downloads/DeVops Project/Cloud Computing/Amazon
+_EC2_Static_Website$ ls -la
+total 40052
+drwxrwxrwx 1 dell dell     4096 Sep 13 03:34  .
+drwxrwxrwx 1 dell dell     4096 Sep 13 02:39  ..
+-rwxrwxrwx 1 dell dell     1706 Sep 12 03:20  Amazon-EC2-Static-Website-Key.pem
+-rwxrwxrwx 1 dell dell   116117 Sep 13 02:34  Amazon_EC2_Static_Website.png
+-rwxrwxrwx 1 dell dell    10210 Sep 12 15:05  Commands.txt
+-rwxrwxrwx 1 dell dell     1052 Sep 12 15:27  README.md
+-rwxrwxrwx 1 dell dell 40771413 Sep 13 02:35  Screenshot.pdf
+-rwxrwxrwx 1 dell dell    62932 Sep 10 10:24  'Student Activity Amazon EC2.pdf'
+-rwxrwxrwx 1 dell dell    29029 Sep 12 20:24  Terminal_Output_1.txt
+-rwxrwxrwx 1 dell dell     1108 Sep 13 03:32  Terminal_Output_2.txt
+-rwxrwxrwx 1 dell dell      160 Sep 13 03:34  index.html
+dell@DESKTOP-94J2OEC:/mnt/c/Users/DELL/Downloads/DeVops Project/Cloud Computing/Amazon
+_EC2_Static_Website$ exit
+logout
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$HTML_B64 = [Convert]::ToBase64String([System.IO.File]::ReadAllBytes(".\index.html"))
+MethodInvocationException: Exception calling "ReadAllBytes" with "1" argument(s): "Could not find file 'C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\index.html'."
+MethodInvocationException: Exception calling "ReadAllBytes" with "1" argument(s): "Could not find file 'C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\index.html'."
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$HTML_B64 = [Convert]::ToBase64String([System.IO.File]::ReadAllBytes(".\index.html"))
+MethodInvocationException: Exception calling "ReadAllBytes" with "1" argument(s): "Could not find file 'C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\index.html'."
+MethodInvocationException: Exception calling "ReadAllBytes" with "1" argument(s): "Could not find file 'C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\index.html'."
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$HTML_B64 = [Convert]::ToBase64String([System.IO.File]::ReadAllBytes((Join-Path (Get-Location) "index.html")))
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$HTML_B64.Length
+216
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$SSM_COMMANDS = @(
+    "echo '$HTML_B64' | base64 -d | sudo tee /var/www/html/index.html > /dev/null",
+    "sudo chown -R www-data:www-data /var/www/html",
+    "sudo chmod -R 755 /var/www/html",
+    "sudo systemctl restart apache2",
+    "sudo systemctl is-active apache2"
+)
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$PARAMETERS = @{ commands = $SSM_COMMANDS } | ConvertTo-Json -Compress
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$COMMAND_ID = aws ssm send-command `
+    --instance-ids $INSTANCE_ID `
+    --document-name "AWS-RunShellScript" `
+    --parameters $PARAMETERS `
+    --query "Command.CommandId" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws login --profile new-aws
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$COMMAND_ID = aws ssm send-command `
+    --instance-ids $INSTANCE_ID `
+    --document-name "AWS-RunShellScript" `
+    --parameters $PARAMETERS `
+    --query "Command.CommandId" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$HTML_B64.Length
+216
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$SSM_COMMANDS = @(
+    "echo '$HTML_B64' | base64 -d | sudo tee /var/www/html/index.html > /dev/null",
+    "sudo chown -R www-data:www-data /var/www/html",
+    "sudo chmod -R 755 /var/www/html",
+    "sudo systemctl restart apache2",
+    "sudo systemctl is-active apache2"
+)
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$PARAMETERS = @{ commands = $SSM_COMMANDS } | ConvertTo-Json -Compress
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$COMMAND_ID = aws ssm send-command `
+    --instance-ids $INSTANCE_ID `
+    --document-name "AWS-RunShellScript" `
+    --parameters $PARAMETERS `
+    --query "Command.CommandId" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$COMMAND_ID
+4f9f8104-8942-40d2-b171-78ffa0e37cf7
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Start-Sleep -Seconds 5
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm get-command-invocation `
+    --command-id $COMMAND_ID `
+    --instance-id $INSTANCE_ID `
+    --query "[Status,StandardOutputContent,StandardErrorContent]" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$INSTANCE_ID = aws ec2 describe-instances --filters "Name=tag:Name,Values=Amazon-EC2-Static-Website" "Name=instance-state-name,Values=running" --query "Reservations[0].Instances[0].InstanceId" --output text --profile new-aws --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$INSTANCE_ID
+i-09279c069212d8562
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$PUBLIC_IP = aws ec2 describe-instances --instance-ids $INSTANCE_ID --query "Reservations[0].Instances[0].PublicIpAddress" --output text --profile new-aws --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$PUBLIC_IP
+3.110.176.24
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Start-Sleep -Seconds 5
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm get-command-invocation `
+    --command-id $COMMAND_ID `
+    --instance-id $INSTANCE_ID `
+    --query "[Status,StandardOutputContent,StandardErrorContent]" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$HTML_B64 = [Convert]::ToBase64String([System.IO.File]::ReadAllBytes((Join-Path (Get-Location) "index.html")))
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$HTML_B64.Length
+216
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$COMMAND_ID
+4f9f8104-8942-40d2-b171-78ffa0e37cf7
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Start-Sleep -Seconds 5
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm get-command-invocation `
+    --command-id $COMMAND_ID `
+    --instance-id $INSTANCE_ID `
+    --query "[Status,StandardOutputContent,StandardErrorContent]" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm list-command-invocations `
+    --command-id $COMMAND_ID `
+    --details `
+    --query "CommandInvocations[0].[Status,StatusDetails,InstanceId]" `
+    --output table `
+    --profile new-aws `
+    --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm list-commands `
+    --command-id $COMMAND_ID `
+    --query "Commands[0].[CommandId,Status,StatusDetails,RequestedDateTime]" `
+    --output table `
+    --profile new-aws `
+    --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm describe-instance-information --filters "Key=InstanceIds,Values=$INSTANCE_ID" --query "InstanceInformationList[0].[InstanceId,PingStatus,PlatformName,AgentVersion]" --output table --profile new-aws --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$SSM_COMMANDS = @(
+    "echo '$HTML_B64' | base64 -d | sudo tee /var/www/html/index.html > /dev/null",
+    "sudo chown -R www-data:www-data /var/www/html",
+    "sudo chmod -R 755 /var/www/html",
+    "sudo systemctl restart apache2",
+    "sudo systemctl is-active apache2"
+)
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$PARAMETERS = @{ commands = $SSM_COMMANDS } | ConvertTo-Json -Compress
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$COMMAND_ID = aws ssm send-command `
+    --instance-ids $INSTANCE_ID `
+    --document-name "AWS-RunShellScript" `
+    --parameters $PARAMETERS `
+    --query "Command.CommandId" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$COMMAND_ID
+f83bd181-b930-4960-b429-7d0e02b65dfb
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Start-Sleep -Seconds 10
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm get-command-invocation `
+    --command-id $COMMAND_ID `
+    --instance-id $INSTANCE_ID `
+    --query "[Status,StatusDetails,StandardOutputContent,StandardErrorContent]" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$VERIFY_ID = aws ssm send-command `
+    --instance-ids $INSTANCE_ID `
+    --document-name "AWS-RunShellScript" `
+    --parameters '{"commands":["sudo systemctl is-active apache2","ls -l /var/www/html/index.html","sudo cat /var/www/html/index.html"]}' `
+    --query "Command.CommandId" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Start-Sleep -Seconds 5
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>aws ssm get-command-invocation `
+    --command-id $VERIFY_ID `
+    --instance-id $INSTANCE_ID `
+    --query "[Status,StandardOutputContent,StandardErrorContent]" `
+    --output text `
+    --profile new-aws `
+    --region ap-south-1
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Invoke-WebRequest "http://$PUBLIC_IP" -UseBasicParsing
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>My AWS Website</title>
+                    </head>
+                    <body>
+                        <h1>Hello AWS!</h1>
+                        <p>Website hosted on Amazon EC2.</p>
+                    </body>
+                    </html>
+
+RawContent        : HTTP/1.1 200 OK
+                    Date: Sun, 13 Sep 2026 04:10:53 GMT
+                    Server: Apache/2.4.52
+                    Server: (Ubuntu)
+                    ETag: "a0-65b556c2dd5cf-gzip"
+                    Accept-Ranges: bytes
+                    Vary: Accept-Encoding
+                    Last-Modified: Sun, 13 Sep 20…
+Headers           : {[Date, System.String[]], [Server, System.String[]], [ETag,
+                    System.String[]], [Accept-Ranges, System.String[]]…}
+Images            : {}
+InputFields       : {}
+Links             : {}
+RawContentLength  : 160
+RelationLink      : {}
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>$PUBLIC_IP
+3.110.176.24
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>http://3.110.176.24
+http://3.110.176.24: The term 'http://3.110.176.24' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+http://3.110.176.24: The term 'http://3.110.176.24' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="UseFuzzyMatching"; value="True"
+>> ParameterBinding(Get-Command): name="FuzzyMinimumDistance"; value="1"
+>> ParameterBinding(Get-Command): name="Name"; value="http://3.110.176.24"
+>> CommandInvocation(Select-Object): "Select-Object"
+>> ParameterBinding(Select-Object): name="First"; value="5"
+>> ParameterBinding(Select-Object): name="Unique"; value="True"
+>> ParameterBinding(Select-Object): name="ExpandProperty"; value="Name"
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cDELL\x5cDownloads\x5cDeVops Project\x5cCloud Computing\x5cAmazon_EC2_Static_WebsitePS C:\Users\DELL\Downloads\DeVops Project\Cloud Computing\Amazon_EC2_Static_Website> ]633;B
+PS>Stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20260913095016
+**********************
